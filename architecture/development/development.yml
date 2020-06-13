@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  api:
+    container_name: missing-pets-api
+    hostname: api
+    networks:
+      - missing-pets-network
+    volumes:
+      - ../../:/usr/app
+    build:
+      context: ../api
+      target: development
+    env_file:
+      - ./.env
+    entrypoint: ["yarn", "--cwd", "/usr/app", "app:api:dev"]
+    ports:
+    - 3000:3000
+    tty: true
+
+networks:
+  missing-pets-network:
+    name: missing-pets-network
