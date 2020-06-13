@@ -1,0 +1,30 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-airbnb", "tslint-config-prettier"],
+  "jsRules": {},
+  "linterOptions": {
+    "exclude": ["dist", "build", "src/authorizer/dist", "src/authorizer/build"]
+  },
+  "rules": {
+    "no-any": false,
+    "typedef": [true, "call-signature", "property-declaration"],
+    "no-unused-expression": false,
+    "member-ordering": false,
+    "no-bitwise": false,
+    "no-var-requires": false,
+    "no-default-export": true,
+    "no-string-literal": false,
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "interface-name": false,
+    "no-shadowed-variable": false,
+    "object-shorthand-properties-first": false,
+    "array-type": false,
+    "jsx-boolean-value": false,
+    "import-name": false,
+    "ordered-imports": false,
+    "quotemark": [true, "single"],
+    "callable-types": false
+  },
+  "rulesDirectory": []
+}
